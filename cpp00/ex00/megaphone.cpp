@@ -4,7 +4,7 @@ char *amp(char *str)
 {
 	int i = -1;
 	while (*(str + ++i))
-		*(str + i) = toupper(*(str + i));
+		*(str + i) = std::toupper(*(str + i));
 	return (str);
 }
 
