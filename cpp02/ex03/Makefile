@@ -1,5 +1,5 @@
 CC= g++
-SRC= main.cpp Fixed.cpp Point.cpp
+SRC= main.cpp Fixed.cpp Point.cpp bsp.cpp
 FLAGS= -g
 
 all:

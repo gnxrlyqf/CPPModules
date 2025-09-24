@@ -3,7 +3,7 @@
 
 void test_case(const std::string& test_name, const Point& a, const Point& b, const Point& c, const Point& p, bool expected) {
 	
-	bool result = Point::bsp(a, b, c, p);
+	bool result = bsp(a, b, c, p);
     std::cout << "Test: " << test_name << std::endl;
     std::cout << "  Triangle: (" << a.getX() << "," << a.getY() << "), " 
               << "(" << b.getX() << "," << b.getY() << "), " 

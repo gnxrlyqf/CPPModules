@@ -30,18 +30,3 @@ Fixed Point::getX() const {
 Fixed Point::getY() const {
 	return (this->y);
 }
-
-Fixed Point::area(const Point a, const Point b, const Point c) {
-	return (((a.x * (b.y - c.y)) + (b.x * (c.y - a.y)) + (c.x * (a.y - b.y))) / 2);
-}
-
-bool Point::bsp(const Point a, const Point b, const Point c, const Point p) {
-	float abc = abs(area(a, b, c).toFloat());
-	float pab = abs(area(p, a, b).toFloat());
-	float pbc = abs(area(p, b, c).toFloat());
-	float pac = abs(area(p, a, c).toFloat());
-
-	std::cout << abc << std::endl;
-	std::cout << pab + pbc + pac << std::endl;
-	return (abc == pab + pbc + pac);
-}

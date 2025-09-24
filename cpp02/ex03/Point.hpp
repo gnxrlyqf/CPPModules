@@ -16,8 +16,10 @@ class Point {
 		~Point();
 		Fixed getX() const;
 		Fixed getY() const;
-		static Fixed area(const Point a, const Point b, const Point c);
-		static bool bsp(const Point a, const Point b, const Point c, const Point point);
 };
+	
+Fixed area(const Point a, const Point b, const Point c);
+bool bsp(const Point a, const Point b, const Point c, const Point point);
+Fixed abs(Fixed n);
 	
 #endif
