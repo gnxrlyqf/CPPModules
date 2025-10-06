@@ -20,7 +20,5 @@ bool bsp(const Point a, const Point b, const Point c, const Point p) {
 	Fixed pbc = abs(area(p, b, c));
 	Fixed pac = abs(area(p, a, c));
 
-	std::cout << abc << std::endl;
-	std::cout << pab + pbc + pac << std::endl;
 	return (abc == pab + pbc + pac);
 }
