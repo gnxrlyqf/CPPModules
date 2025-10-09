@@ -1,0 +1,6 @@
+CC= g++
+BRG= main.cpp
+FLAGS= -Wall -Werror -Wextra
+
+all:
+	$(CC) $(BRG) $(FLAGS) -o sed

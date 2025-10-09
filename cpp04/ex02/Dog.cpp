@@ -6,12 +6,12 @@ Dog::Dog() {
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog& other) : Animal(other) {
+Dog::Dog(const Dog &other) : Animal(other) {
 	*this = other;
 	std::cout << "Dog Copy Constructor" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& other) {
+Dog &Dog::operator=(const Dog &other) {
 	if (this != &other)
         this->type = other.type;
 	return *this;

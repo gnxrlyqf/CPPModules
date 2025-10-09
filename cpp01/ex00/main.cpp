@@ -1,8 +1,9 @@
 #include "Zombie.hpp"
 
 int main() {
-	randomChump("lrhba");
-	Zombie *james = newZombie("james");
-	james->announce();
-	delete james;
+	Zombie *zombie1 = newZombie("Zombie1");
+	zombie1->announce();
+	delete zombie1;
+	std::cout << "=================================\n";
+	randomChump("Zombie2");
 }

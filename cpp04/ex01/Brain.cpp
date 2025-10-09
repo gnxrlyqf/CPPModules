@@ -1,16 +1,16 @@
 #include "Brain.hpp"
 
 Brain::Brain() {
-	std::cout << "Brain Default Constructor" << std::endl;
+	 << "Brain Default Constructor" << std::endl;
 }
 
-Brain::Brain(const Brain& other) {
+Brain::Brain(const Brain &other) {
 	*this = other;
-	std::cout << "Brain Copy Constructor" << std::endl;
+	 << "Brain Copy Constructor" << std::endl;
 
 }
 
-Brain& Brain::operator=(const Brain& other) {
+Brain &Brain::operator=(const Brain &other) {
 	int i = -1;
 	if (this != &other)
 		while (++i < 100)
@@ -19,5 +19,5 @@ Brain& Brain::operator=(const Brain& other) {
 }
 
 Brain::~Brain() {
-	std::cout << "Brain Destructor" << std::endl;
+	 << "Brain Destructor" << std::endl;
 }

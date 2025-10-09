@@ -1,8 +1,10 @@
 #include "Zombie.hpp"
 
 int main() {
-	randomChump("lrhba");
-	Zombie *james = newZombie("james");
-	james->announce();
-	delete james;
+	Zombie *horde = zombieHorde(5, "Zombie");
+	std::cout << "=================================\n";
+	for (int i = 0; i < 5; i++)
+		horde[i].announce();
+	std::cout << "=================================\n";
+	delete[] horde;
 }
