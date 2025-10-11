@@ -24,13 +24,11 @@ void Harl::complain(std::string level) {
         &Harl::error
     };
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-
 	int i;
+
 	for (i = 0; i < 4 && (levels[i] != level); i++);
 	switch (i)
 	{
-		default:
-			std::cout << "Unknown level.\n";
 		case 0:
 			(this->*func[0])();
 		case 1:
@@ -38,7 +36,8 @@ void Harl::complain(std::string level) {
 		case 2:
 			(this->*func[2])();
 		case 3:
-			(this->*func[3])();
-		break;
+			(this->*func[3])(); break;
+		default:
+			std::cout << "Unknown level.\n";
 	}
 }

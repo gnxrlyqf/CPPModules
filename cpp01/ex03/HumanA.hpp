@@ -1,5 +1,5 @@
-#ifndef __HUMANA_HPP_
-#define __HUMANA_HPP_
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include "Weapon.hpp"
 

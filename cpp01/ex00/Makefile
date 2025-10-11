@@ -1,6 +1,21 @@
-CC= g++
-SRC= main.cpp Zombie.cpp
-FLAGS= 
+NAME= zombie
+CXX= c++
+FLAGS= -Wall -Wextra -Werror -std=c++98
+SRC= Zombie.cpp main.cpp
+OBJ= $(SRC:.cpp=.o)
 
-all:
-	$(CC) $(SRC) $(FLAGS) -o zombie
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
+
+%.o: %.cpp
+	$(CXX) $(FLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

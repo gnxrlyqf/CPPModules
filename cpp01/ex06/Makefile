@@ -1,6 +1,21 @@
-CC= g++
+NAME= harl2
+CXX= c++
+FLAGS= -Wall -Wextra -Werror -std=c++98
 SRC= main.cpp Harl.cpp
-FLAGS= -Wall -Werror -Wextra
+OBJ= $(SRC:.cpp=.o)
 
-all:
-	$(CC) $(SRC) $(FLAGS) -o harl
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
+
+%.o: %.cpp
+	$(CXX) $(FLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

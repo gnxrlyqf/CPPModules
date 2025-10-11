@@ -16,8 +16,8 @@ void Harl::error() {
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n";
 }
 
-void Harl::complain(std::string level) {
-	void	(Harl::*fcts[5])(void) = {
+void Harl::complain(const std::string &level) {
+	void (Harl::*fcts[4])(void) = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
@@ -31,5 +31,5 @@ void Harl::complain(std::string level) {
 	if (i == 4)
 		std::cout << "Unknown level.\n";
 	else
-		(this->*fcts[i * (i < 4) + (i == 4) * 4])();
+		(this->*fcts[i])();
 }
