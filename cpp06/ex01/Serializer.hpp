@@ -8,7 +8,6 @@ class Serializer {
 	private:
 		Serializer();
 		Serializer(const Serializer &s);
-		Serializer& operator=(const Serializer &other);
 		~Serializer();
 
 	public:

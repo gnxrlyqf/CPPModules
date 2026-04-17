@@ -1,5 +1,5 @@
 #include "Identify.hpp"
-
+#include <cstdlib>
 int main()
 {
 	srand(time(NULL));
