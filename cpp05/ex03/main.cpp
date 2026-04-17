@@ -9,7 +9,7 @@ int main() {
 	Intern i;
 
 	try {
-		AForm *f = i.makeForm("shrubberyCreation", "lhrba");
+		AForm *f = i.makeForm("shrubberyCreation", "lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(*f);
@@ -20,7 +20,7 @@ int main() {
 	}
 	std::cout << "====================================================" << std::endl;
 	try {
-		AForm *f = i.makeForm("robotomyRequest", "lhrba");
+		AForm *f = i.makeForm("robotomyRequest", "lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(*f);
@@ -31,7 +31,7 @@ int main() {
 	}
 	std::cout << "====================================================" << std::endl;
 	try {
-		AForm *f = i.makeForm("presidentialPardon", "lhrba");
+		AForm *f = i.makeForm("presidentialPardon", "lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(*f);

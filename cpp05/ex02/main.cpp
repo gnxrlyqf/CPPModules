@@ -6,7 +6,7 @@
 
 int main() {
 	try {
-		ShrubberyCreationForm f("lhrba");
+		ShrubberyCreationForm f("lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(f);
@@ -16,7 +16,7 @@ int main() {
 	}
 	std::cout << "====================================================" << std::endl;
 	try {
-		RobotomyRequestForm f("lhrba");
+		RobotomyRequestForm f("lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(f);
@@ -26,7 +26,7 @@ int main() {
 	}
 	std::cout << "====================================================" << std::endl;
 	try {
-		PresidentialPardonForm f("lhrba");
+		PresidentialPardonForm f("lform");
 		Bureaucrat b(1, "lbiro9rat");
 
 		b.signForm(f);
