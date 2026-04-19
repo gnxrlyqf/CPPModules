@@ -2,6 +2,7 @@
 #define SPAN_HPP
 
 #include <vector>
+#include <stdexcept>
 
 class Span {
 	private:
@@ -18,12 +19,24 @@ class Span {
 		
 		Span(unsigned int N);
 
-		void	addNumber(int num);
-		int		longestSpan() const;
-		int		shortestSpan() const;
+		void addNumber(int num);
+		int longestSpan() const;
+		int shortestSpan() const;
 
 		template <typename T>
-		void addNumbers(T begin, T end);
+		void addNumbers(T begin, T end) {
+			long available = max_size - arr.size();
+
+			if (std::distance(begin, end) <= available)
+				arr.insert(arr.end(), begin, end);
+			else {
+				T cut = begin;
+
+				std::advance(cut, available);
+				arr.insert(arr.end(), begin, cut);
+				throw std::overflow_error("Span overflow: not all numbers were inserted");
+			}
+		}
 };
 
 

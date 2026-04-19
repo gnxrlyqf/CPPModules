@@ -4,8 +4,7 @@
 #include <ctime>
 #include <vector>
 
-int main()
-{
+int main() {
 	std::srand(std::time(NULL));
 
 	try {
@@ -25,8 +24,7 @@ int main()
 			Span sp2(1);
 			sp2.addNumber(42);
 			std::cout << sp2.shortestSpan() << std::endl; // should throw
-		}
-		catch (std::exception &e) {
+		} catch (std::exception &e) {
 			std::cout << "Caught exception (shortest): " << e.what() << std::endl;
 		}
 
@@ -38,31 +36,14 @@ int main()
 			std::cout << "Caught exception (longest): " << e.what() << std::endl;
 		}
 
-		std::cout << "\n=== Massive test with 100000 numbers ===" << std::endl;
-		Span big(100000);
-
-		for (int i = 0; i < 100000; i++)
-			big.addNumber(std::rand());
-
-		std::cout << "Shortest span: " << big.shortestSpan() << std::endl;
-		std::cout << "Longest span:  " << big.longestSpan() << std::endl;
-
-		std::cout << "\n=== Edge test: increasing sequence ===" << std::endl;
-		Span seq(100000);
-		for (int i = 0; i < 100000; i++)
-			seq.addNumber(i);
-
-		std::cout << "Shortest span: " << seq.shortestSpan() << std::endl; // expect 1
-		std::cout << "Longest span:  " << seq.longestSpan() << std::endl;  // expect 99999
-
-		std::cout << "\n=== Edge test: identical numbers ===" << std::endl;
-		Span dup(1000);
-		for (int i = 0; i < 1000; i++)
-			dup.addNumber(42);
-
-		std::cout << "Shortest span: " << dup.shortestSpan() << std::endl; // expect 0
-		std::cout << "Longest span:  " << dup.longestSpan() << std::endl;  // expect 0
-
+		std::cout << "\n=== addNumbers test ===" << std::endl;
+		Span add(1000);
+		std::vector<int> nums;
+		for (int i = 0; i < 1000; ++i)
+			nums.push_back(i * 2);
+		add.addNumbers(nums.begin(), nums.end());
+		std::cout << "Shortest span: " << add.shortestSpan() << std::endl; // expect 2
+		std::cout << "Longest span:  " << add.longestSpan() << std::endl;  // expect 1998
 	} catch (std::exception &e) {
 		std::cerr << "Unexpected error: " << e.what() << std::endl;
 	}

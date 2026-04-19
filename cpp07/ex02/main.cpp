@@ -19,7 +19,7 @@ int main() {
 
 	std::cout << "\n--- Test copy constructor ---\n";
 	Array<int> copyNumbers(numbers);
-	copyNumbers[0] = 999; // modify copy, original should stay the same
+	copyNumbers[0] = 999;
 	std::cout << "Original: ";
 	for (unsigned int i = 0; i < numbers.size(); ++i)
 		std::cout << numbers[i] << " ";
