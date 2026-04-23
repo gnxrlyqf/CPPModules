@@ -41,11 +41,4 @@ class BitcoinExchange {
 	};
 };
 
-// std::ostream& operator<<(std::ostream& os, const BitcoinExchange &ex) {
-// 	for (std::map<int, float>::const_iterator it = ex.values.begin(); it != ex.values.end(); ++it) {
-// 		os << it->first << ": " << it->second << std::endl;
-// 	}
-// 	return os;
-// }
-
 #endif
