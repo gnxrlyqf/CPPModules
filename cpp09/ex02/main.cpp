@@ -1,5 +1,4 @@
 #include "PmergeMe.hpp"
-#include "PmergeMe.tpp"
 #include <iostream>
 #include <deque>
 #include <iomanip>
@@ -19,7 +18,7 @@ int main(int ac, char **av) {
 		std::cout << "Time to process a range of "
 		<< vec.getContainer().size() << " with std::vector: " << std::fixed << std::setprecision(6) << vec_time << " μs" << std::endl;
 		std::cout << "Time to process a range of "
-		<< vec.getContainer().size() << " with std::deque: " << std::fixed << std::setprecision(6) << deq_time << " μs" << std::endl;
+		<< deq.getContainer().size() << " with std::deque: " << std::fixed << std::setprecision(6) << deq_time << " μs" << std::endl;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
